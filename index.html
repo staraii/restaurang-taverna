@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Restaurang Taverna</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+		<link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap" rel="stylesheet" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./src/img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./src/img//favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./src/img/favicon-16x16.png">
+		<script src="./src/js/app3.js" defer type="module"></script>   
+
+
+	</head>   
+	
+	<body>
+	<!------------------------------ Header ------------------------------>
+		<header>
+
+
+			<!-- Nav - hamburgermeny -->
+			<nav>
+				<button class="menu-button" type="button" name="Meny">
+					<i class="fas fa-bars menu-icon"></i>
+				</button>
+
+				<!-- Tillbaka knappen för menyn -->
+				<button class="button-menu-backward hide">Tillbaka &lt;&lt;&lt;</button>
+
+				<!-- Dropdownmeny -->
+				<menu>
+					<li><a href="#" name="Hem" class="a-menu">HEM</a></li>
+					<li><a href="#" name="Meny" class="a-menu">MENY</a></li>
+					<li><a href="#" name="Kontakt" class="a-menu">KONTAKT</a></li>
+					<li><a href="#" name="Om-oss" class="a-menu">OM OSS</a></li>
+				</menu>
+			</nav>
+
+			<!-- Logotyp -->
+			<figure class="figure-header-logo">
+				<img src="./src/img/transparentlogo.png" alt="Logo" class="img-header img-header-trans">
+			</figure>	
+		</header>
+
+
+		<!-- Main - de olika sections är de olika sidorna t.ex. hem, meny, kontakt mm.  -->
+	<main>
+		<!-- Featured food and beverages -->
+		<section class="section-todays-dishes section-dagens section-content">
+			<figure class="figure-welcome figure-welcome-trans">
+				<img src="./src/img/transparentlogo.png" class="img-welcome">
+				<h1 class="h1-dish">Restaurang Taverna</h1>
+			</figure>
+			
+			<section class="todays-dishes"></section>
+		</section>
+
+	<!------------------------ Section - Meny - container för det som ska visas på meny-sidan --------------------->
+
+			<section class="section-content section-menu-container hide">
+
+				<!-- Bbq section -->
+				<section class="section-menu-cat">
+
+					<div class="div-menu-maincat">
+						<img src="./src/img/bbq-meat.jpg" class="img-menu-filters">
+
+						<h3 class="h3-menu-section">BBQs</h3>
+					</div>
+
+					<div class="div-sort-menu hide">
+
+
+						<ul class="ul-menu-filter">
+							<li class="li-menu-filter">
+								<button type="button" class="button-sort-menu">Stat</button>   
+								<button type="button" class="button-sort-menu">Rate</button>
+							</li>  
+
+							<li>
+								<ul class="ul-sort-state hide">
+
+								</ul>
+							</li>     
+						</ul>
+					</div>
+					
+					<section class="section-menu-cat-content hide"></section>
+				</section>
+
+
+				<!-- Drinks Section -->
+				<section class="section-menu-cat">
+		
+					<div class="div-menu-maincat">
+
+						<img src="./src/img/drinks.jpg" class="img-menu-filters">
+
+						<h3 class="h3-menu-section">Drinks</h3>
+
+					</div>
+
+					<div class="div-sort-menu hide">
+
+
+						<ul class="ul-menu-filter">
+							<li class="li-menu-filter">
+								<button type="button" class="button-sort-menu">Stat</button>   
+								<button type="button" class="button-sort-menu">Rate</button>
+							</li>  
+
+							<li>
+								<ul class="ul-sort-state hide">
+								</ul>
+							</li>     
+						</ul>
+					</div>
+
+
+					<section class="section-menu-cat-content"></section>
+				</section>
+
+
+				<!-- Desserts Section -->
+				<section class="section-menu-cat">
+
+					<div class="div-menu-maincat">
+						<img src="./src/img/dessert.jpg" class="img-menu-filters">
+
+						<h3 class="h3-menu-section">Desserts</h3>
+					</div>
+
+					<div class="div-sort-menu hide">
+
+
+						<ul class="ul-menu-filter">
+
+							<li class="li-menu-filter">
+
+								<button type="button" class="button-sort-menu">Stat</button>   
+								<button type="button" class="button-sort-menu">Rate</button>
+							</li>  
+
+							<li>
+								<ul class="ul-sort-state hide">
+
+								</ul>
+							</li>     
+						</ul>
+					</div>
+
+
+					<section class="section-menu-cat-content"></section>
+				</section>
+			</section>
+
+
+<!------------------------------ Kontakt ------------------------------>
+
+		<section class="section-content section-kontakt hide">
+			<!-- Kontaktformulär -->
+			<h2>Kontakta oss</h2>
+			
+			<form action="action_page.php">
+				<label for="fname">Förnamn</label>
+				<input type="text" id="fname" name="firstname" placeholder="Förnamn..." />
+
+				<label for="lname">Efternamn</label>
+				<input type="text" id="lname" name="lastname" placeholder="Efternamn..." />
+
+				<label for="email">E-post</label>
+				<input type="email" id="email" placeholder="example@mail.com"></input>
+
+				<label for="subject">Meddelande</label>
+				<textarea id="subject" name="subject" placeholder="Meddelande..." style="height: 200px"></textarea>
+
+				<input type="submit" value="Skicka" />
+			</form>
+
+			<!-- Kontakt info -->
+			<div>
+				<div class="contact-info">
+					<div class="contact-details">
+						<p>Kungsgatan 4</p>
+						<p><a href="tel:+46701234567">+46 70 123 45 67</a></p>
+						<p><a href="info@restaurangtaverna.se">info@restaurangtaverna.se</a></p>
+					</div>
+					
+					<div class="opening-hours">
+					<p>Öppettider</p>
+					<p>Mån - Ons:<span> 10.00 - 19.00</span></p>
+					<p>Lör - Sön:<span> 11.00 - 20.00</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Section - Om Oss - container för det som ska visas på kontakt-sidan -->
+		<section class="section-content section-om-oss hide">
+			<!--Om oss - Welcome-->
+			<section class="section-om-oss__title">
+				<h1 class="h1-dish">Välkommen till Taverna!</h1>
+			</section>
+
+			<!--BILDSPEL/SCROLLER-->
+			<section class="section-om-oss__picture-scroller">
+				<!--KNAPPAR TILL BILDSPEL-->
+				<div class="section-om-oss__picture-scroller__button-container">
+					<button class="section-om-oss__picture-scroller__button-left" onclick="changeImageDirectionPre(-1)">
+						<img src="./src/img/left-arrow-color.png" alt="Left arrow" />
+					</button>
+					<button class="section-om-oss__picture-scroller__button-right" onclick="changeImageDirectionPre(1)">
+						<img src="./src/img/right-arrow-color.png" alt="Right arrow" />
+					</button>
+				</div>
+				<div class="section-om-oss__picture-scroller__play-stop-container">
+					<button class="section-om-oss__picture-scroller__button-play" onclick="togglePlayStop(this)">
+						<img src="./src/img/play.png" alt="Play" />
+					</button>
+				</div>
+
+					<!--ARTIKLAR TILL BILDSPELET-->
+					<section class="section-om-oss__picture-scroller__article-container">
+						<!--ARTIKEL 1-->
+						<article class="section-om-oss__picture-scroller__article">
+							<figure class="section-om-oss__picture-scroller__article__img-container">
+								<img src="src/img/taverna/Taverna.jpg" alt="A wide view of the inside of the Taverna bar restaurant" />
+							</figure>
+							<p>Välkommen till Taverna, där varje hörn andas äkta BBQ-passion. Upplev kärleken till detaljer och njut av varje tugga i denna autentiska BBQ-oas.</p>
+						</article>
+
+						<!--ARTIKEL 2-->
+						<article class="section-om-oss__picture-scroller__article hide">
+							<figure class="section-om-oss__picture-scroller__article__img-container">
+								<img src="src/img/taverna/Taverna-Bar.jpg" alt="A picture of taverna drink bar" />
+							</figure>
+							<p>Vid Tavernas bar är varje plats en första parkett till en levande show av smakupplevelser. Barpersonalen, med sina skickliga händer, skapar inte bara förfriskningar utan också en känsla av gemenskap.</p>
+						</article>
+						
+						<!--ARTIKEL 3-->
+						<article class="section-om-oss__picture-scroller__article hide">
+
+							<figure class="section-om-oss__picture-scroller__article__img-container">
+								<img src="src/img/taverna/BBQ.jpg" alt="A picture of two steaks in the oven" />
+							</figure>
+							<p>I den hett brinnande tegelugnen på Taverna, intar två saftiga stekar scenen för en smakrik föreställning. Ovanför glödande kol dansar de rikligt kryddade köttbitarnas doftande ångor. </p>
+						</article>
+						
+						<!--ARTIKEL 4-->
+						<article class="section-om-oss__picture-scroller__article hide">
+							<figure class="section-om-oss__picture-scroller__article__img-container">
+								<img src="src/img/taverna/Mat.jpg" alt="Showing food of chicken and baked beans" />
+							</figure>
+							<p> Varje rätt är som en egen berättelse, och tillsammans utgör de en symfoni av smaker som väcker dina sinnen till liv.</p>
+						</article>
+						
+						<!--ARTIKEL 5-->
+						<article class="section-om-oss__picture-scroller__article hide">
+							<figure class="section-om-oss__picture-scroller__article__img-container">
+								<img src="src/img/taverna/Mat2.jpg" alt="A picture of taverna drink bar" />
+							</figure>
+							<p>Vår palett av aptitretande läckerheter, var och en skapad för att ge dig en smakresa av högsta kaliber. Låt din aptit styra och utforska denna mångfald av tilltugg, där varje tugga är ett steg närmare fullkomlighet.</p>
+						</article>
+					</section>
+			</section>
+
+			<!--OM OSS - TEXT-->
+			<section class="section-om-oss__information">
+				<h3 class="h3-om-oss">Om oss</h3>
+				<p class="p-om-oss">
+					Vår passion är att skapa en autentisk BBQ-upplevelse, där varje
+					måltid är en hyllning till rökiga smaker och traditionella
+					tillagningsmetoder. Vårt kök är fyllt av en blandning av hemligheter
+					och kärlek till konsten att grilla. Oavsett om du älskar saftiga
+					revben, långsamt tillagad pulled pork eller smakrik brisket, kommer
+					du att uppleva äkta värme i varje tugga.
+				</p>
+				<div class="social-media-icon-container">
+					<a href="facebook.com"><img src="./src/img/social-media-icons-facebook.png" /></a>
+					<a href="instagram.com"><img src="./src/img/social-media-icons-instagram.png" /></a>
+				</div>
+				<p class="p-om-oss">
+				På Taverna handlar det inte bara om mat; det handlar om gemenskap,
+				glädje och en smakresa genom BBQ-traditioner. Vi ser fram emot att
+				välkomna dig till vårt bord och dela dessa smakupplevelser med dig.
+				</p>
+			</section>
+		</section>
+	</main>
+
+
+
+	<!-- Footer - container för beställning/varukorg -->
+	<footer>
+		<!-- Section - container för den del av footern som alltid är synlig -->
+		<section class="section-footer">
+			<!-- h3 - valda maträtter -->
+			<h3 class="h3-footer">Valda maträtter</h3>
+
+			<!-- span - visar antaler maträtter/varor i "kundkorg" -->
+			<span class="span-footer-dishes">0</span>
+
+				<!-- Button - knapp för att öppna beställning/kundkorg, expanderar footern till full storlek -->
+				<button class="button-footer-opener">Se beställning</button>
+		</section>
+
+		<!-- Section - container där beställningen listas och knapp för att beställa -->
+		<section class="section-footer-order">
+			<!-- Formulär för beställning -->
+			<!-- Etikett för att ange bordnummer -->
+
+			<!-- Lista för beställning -->
+			<ul class="ul-footer-order">
+
+				<!-- Här har du möjlighet att lägga till dina beställningsdetaljer -->
+				<li class="li-order-heading">
+					<span class="span-footer-header-dishes">Maträtt</span>
+					<span class="span-footer-header-price">Pris</span>
+					<span class="span-footer-header-numberofitems">Antal</span>
+					<span class="span-footer-buttons">
+						<!-- <button type="button" class="button-footer-order button-footer-order-add">Lägg till</button>
+						<button type="button" class="button-footer-order button-footer-order-remove">Ta bort</button> -->
+					</span>
+				</li>  
+			</ul>
+			
+
+			
+		</section>
+
+		<section class="section-footer-submitorder">
+			<ul class="ul-footer-ordertotal">
+				<li class="li-footer-ordertotal">
+					<span class="span-footer-total">Total:</span>
+					<span class="span-footer-total-price">0</span>
+				</li>
+			</ul>
+
+			<!-- Knapp för att göra beställningen -->
+			<button id="beställning-submit" class="button-footer-submitorder" type="button">Beställ</button>
+		</section>
+	</footer>
+</body>
+</html>

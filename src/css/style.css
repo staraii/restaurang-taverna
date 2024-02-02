@@ -1,0 +1,689 @@
+/* Roots-variabler,  */
+:root {
+	--padding: calc(8px + 1.5625vw);
+	--font: calc(15px + 0.390625vw);
+
+	--red: #f04245;
+	--light-red: #ff5252;
+	--black: #0a0a0a;
+	--white: #f3f7f3;
+
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: var(--font);
+}
+
+  /* -------------------------------------------------------------------------------- */
+  /* Today's Dishes */
+.section-todays-dishes {
+	color: var(--white);
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	gap: var(--padding);
+	overflow-y: auto;
+	padding: var(--padding);
+}
+.todays-dishes {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.figure-welcome {
+	width: 100%;
+	opacity: 1;
+	transition: all 1s ease-in-out;
+}
+.figure-welcome-trans {
+	opacity: 0;
+}
+
+.img-welcome {
+	width: 80%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	opacity: 1;
+	
+}
+.img-welcome-trans {
+	opacity: 0;
+	width: 10%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	transition: all 1.5s ease-in-out;
+}
+
+  /* -------------------------------------------------------------------------------- */
+
+body {
+	font-size: var(--font);
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--black);
+	color: #282828;
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+button {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	&:focus {
+		outline: 2px solid #9999ff;
+	}
+}
+
+header {
+	background-color: var(--black);
+	width: 100%;
+	height: 10vh;
+	border-bottom: 1px solid var(--red);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--padding);
+	position: relative;
+
+}
+
+nav {
+	padding: var(--padding);
+	height: 10vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center; 
+}
+
+  /* Knapp för hamburgermenyn */
+.menu-button {
+	outline: none;
+	border: 0;
+	background: transparent;
+}
+
+  /* Hamburgerikon */
+.menu-icon {
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	font-size: 3rem;
+	color: var(--red);
+}
+
+
+  /* Dropdownmenyn */
+menu {
+	display: none;
+	flex-direction: column;
+	justify-content: stretch;
+	position: absolute;
+	top: 10vh;
+	left: 0;
+	width: 75vw;
+	max-width: 500px;
+	list-style: none;
+	z-index: 5;
+}
+
+/* Menyns rader */
+menu li {
+	flex-grow: 1;
+	background-color: var(--red);
+	outline: 1px solid var(--black);
+}
+
+  /* Länkarna i dropdownmenyn */
+menu a {
+	display: block;
+	color: var(--black);
+	font-size: 1.7rem;
+	padding: var(--padding);
+}
+
+  /* Visar dropdownmenyn */
+.menu-open {
+	display: flex;
+	position: absolute;
+	top: 10vh;
+}
+
+.button-menu-backward {
+	font-size: 2rem;
+	line-height: 2rem;
+	color: var(--red);
+	background-color: var(--black);
+	border: 0;
+	text-align: center;
+}
+
+
+.figure-header-logo {
+	height: 10vh;
+}
+
+.img-header {
+	height: 100%;
+	width: auto;
+	aspect-ratio: 1 / 1;
+	transition: all 1.5s ease-in-out;
+	opacity: 1;	
+}
+.img-header-trans {
+	opacity: 0;
+}
+
+
+
+  /* ************************************ MAIN ******************************************** */
+main {
+	width: 100%;
+	height: 80vh;
+	overflow: hidden;
+}
+
+.section-content {
+	height: 100%;
+	/* display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center; */
+}
+.section-menu-container {
+    /* overflow: hidden; */
+	display: flex;
+	flex-direction: column;
+    /* padding: var(--padding); */
+}
+
+  /* h1 - huvudrubrik till de olika sidorna */
+.h1-dish {
+	font-size: 1.5rem;
+	font-weight: 400;
+	background-color: var(--black);
+	color: var(--red);
+	padding: var(--padding);
+	text-align: center;
+	margin-bottom: var(--padding);
+    /* border: 1px solid var(--red); */
+}
+
+.section-menu-cat {
+	color: var(--white);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+    /* flex-wrap: wrap; */
+	justify-content: space-between;
+	width: 100%;
+
+    /* padding: var(--padding); */
+}
+
+.h3-menu-section {
+	border: 1px solid var(--red);
+	font-size: 2rem;
+	line-height: 3rem;
+	text-align: center;
+	background-color:var(--red);
+	color: var(--black);
+	height: 7vh;
+}
+
+
+.div-sort-menu {
+	display: flex;
+	flex-direction: column;
+}
+
+.ul-menu-filter {
+	list-style: none;
+	line-height: 2em;
+	position: relative;
+	height: 3vh;
+}
+.li-menu-filter {
+	display: flex;
+	line-height: 2em;
+	text-align: center;
+	height: 2em;
+}
+
+.button-sort-menu {
+	flex-grow: 1;
+	border: 0;
+	background-color: var(--black);
+	color: var(--red);
+	font-size: 1.2em;
+	outline: 1px solid var(--red);
+}
+
+.ul-sort-state {
+	list-style: none;
+	width: calc(50% - 4px);
+	position: absolute;
+	outline: 1px solid var(--red);
+}
+
+.li-sort-state {
+/* border-bottom: 1px solid var(--red);
+    border-right: 1px solid var(--red); */
+
+    /* outline: 1px solid var(--red); */
+	border-top: 1px solid var(--red);
+	border-left: 1px solid var(--red);
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	background-color: var(--black);
+
+}
+
+.div-menu-maincat {
+	display: flex;
+	flex-direction: column; 
+}
+.img-menu-filters {
+	width: 100%;
+}
+
+
+
+/* Gör att filter/val-knapparna blir "aktiverade" */
+.button-sub-active {
+	color: var(--black);
+	background-color: var(--red);
+}
+
+.section-menu-cat-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--padding);
+	row-gap: 3rem;
+	scrollbar-width: thin;
+	scrollbar-color: var(--red);
+	padding: var(--padding);
+	height: 70vh;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: var(--red);
+
+}
+.section-menu-cat-content::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+.section-menu-cat-content::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom right, #F04245 0%, #fc1a1d 100%);
+	border-radius: 5px;
+}
+
+
+.article-dish {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--red);
+
+	&[data-rate='1'] {order: 5;}
+	&[data-rate='2'] {order: 4;}
+	&[data-rate='3'] {order: 3;}
+	&[data-rate='4'] {order: 2;}
+	&[data-rate='5'] {order: 1;}
+}
+
+.p-article-originandrate {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1rem;
+	line-height: 2rem;
+	border-bottom: 1px solid var(--red);
+}
+.span-origin {
+	text-align: left;
+	padding-left: var(--padding);
+}
+.span-rate {
+	text-align: right;
+	padding-right: var(--padding);  
+}
+
+.img-dish {
+	width: 100%;
+	border-bottom: 1px solid var(--red);
+	margin-bottom: var(--padding);
+}
+
+.span-dish {
+	margin-top: var(--padding);
+	margin-bottom: var(--padding);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.button-article-add {
+	background-color: var(--red);
+	color: var(--white);
+	width: 35%;
+	height: 3.5rem;
+	border-radius: 0 3rem 3rem 0;
+	border: 0;
+	font-size: 0.9rem;
+	transition: all 0.3s ease-in-out;
+
+}
+
+.button-article-add-interact {
+	color: var(--red);
+	background-color: var(--white);
+}
+.h3-dish-name {
+	color: var(--white);
+	font-size: 1.3rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+    /* line-height: 2.5rem; */
+	width: 65%;
+}
+.p-dish-dsc {
+	color: var(--red);
+	padding: var(--padding);
+}
+.p-dish-price {
+	color: var(--white);
+	text-align: right;
+	padding: var(--padding);    
+}
+
+
+  /* **************************** FOOTER **************************** */
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: fixed;
+	top: 90vh;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--black);
+	border-top: 1px solid var(--red);
+	z-index: 15;
+	transition: all 1s ease-in-out;
+}
+
+  /* Klass för att toggla expansion av footern */
+.footer-open {
+	top: 0;
+	z-index: 3;
+}
+
+  /* Klass för att visa att maträtt lagts till i beställning */
+.footer-added {
+	background-color: #5c5c5c;
+}
+
+  /* Section - container för den synliga delen av footern */
+.section-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 10vh;
+}
+  /* h3 - "Valda maträtter" */
+.h3-footer {
+	font-size: 1rem;
+	color: var(--red);
+	font-weight: 400;
+}
+  /* Span - visar antalet tillagda maträtter */
+.span-footer-dishes {
+	/* height: 8vh; */
+	/* width: 5vw; */
+	/* line-height: 8vh; */
+	font-size: 1rem;
+	color: var(--red);
+	font-weight: 400;
+}
+
+  /* Button - expanderar footern */
+.button-footer-opener {
+	width: 30%;
+	height: 6vh;
+	border: 1px solid var(--red);
+	background-color: var(--black);
+	color: var(--red);
+	font-size: 0.9rem;
+}
+
+  /* Section - container för att visa beställning */
+.section-footer-order {
+	width: 100%;
+	height: 70vh;
+	color: var(--white);
+	overflow: auto;
+	/* padding: var(--padding); */
+}
+
+  /* Ul - lista för att vias valda maträtter */
+.ul-footer-order {
+	width: 100%;
+	list-style: none;
+	/* padding: var(--padding); */
+}
+
+  /* li - listans rader, container för radinnehållet */
+.li-order-heading {
+	width: 100%;
+	color: var(--red);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 1%;
+	/* padding-top: 1.3rem;
+	padding-bottom: 1.3rem; */
+	padding: var(--padding);
+	border-bottom: 1px solid var(--red);
+	/* border-top: 1px solid var(--red); */
+}
+.li-order {
+	width: 100%;
+	color: var(--red);
+	background-color: var(--black);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 1%;
+	/* padding-top: 1.3rem;
+	padding-bottom: 1.3rem; */
+	padding: var(--padding);
+	border-bottom: 1px solid var(--red);
+	transition: all 0.4s ease-in-out;
+}
+
+/* .li-order:nth-child(1) {
+	border-top: 1px solid var(--red);
+} */
+
+  /* Span - visar namnet på vald maträtt */
+.span-footer-itemname {
+	width: 45%;
+	font-size: 0.8rem;
+	color: var(--white);
+	line-height: 1rem;
+
+}
+.span-footer-itemprice {
+	font-size: 0.8rem;
+	line-height: 1rem;
+	width: 20%;
+	text-align: center;
+}
+
+  /* span - visar antal tillagda av maträtt */
+.span-footer-numberofitem {
+	width: 10%;
+	font-size: 0.8rem;
+	line-height: 1rem;
+	text-align: center;
+	color: var(--white);
+}
+
+  /* Span - container för "lägg till"- & "ta bort"-knapparna */
+.span-footer-buttons {
+	width: 25%;
+	line-height: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+  /* Button - "lägg till"- & "ta bort"-knapp */
+.button-footer-order {
+	width: 45%;
+	height: 1rem;
+	color: var(--red);
+	background-color: var(--black);
+	border: 1px solid var(--red);
+	font-size: 0.8rem;
+	line-height: 1rem;
+}
+
+/* Heading i orderlistan */
+.span-footer-header-dishes {
+	width: 45%;
+	font-size: 1.2rem;
+	color: var(--white);
+}
+.span-footer-header-price {
+	font-size: 1.2rem;
+	width: 20%;
+	text-align: center;
+}
+.span-footer-header-numberofitems {
+	width: 10%;
+	font-size: 1.2rem;
+	text-align: center;
+	color: var(--white);
+}
+
+
+
+
+
+.ul-footer-ordertotal {
+	list-style: none;
+	width: 100%;	
+	/* padding: var(--padding); */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.li-footer-ordertotal {	 
+	width: 75%;
+	color: var(--white);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10%;
+	padding: 0.5rem;
+	border-bottom: 1px solid var(--red);
+}
+.span-footer-total {
+	width: 50%;
+	text-align: right;
+	font-size: 1.3rem;
+	/* border-bottom: 1px solid var(--red); */
+	/* padding: var(--padding); */
+}
+
+.span-footer-total-price {
+	width: 50%;
+	text-align: left;
+	font-size: 1.3rem;
+	/* border-bottom: 1px solid var(--red); */
+	/* padding: var(--padding); */
+}
+  /* Section - container, längst ner.  */
+.section-footer-submitorder {
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+  /* Button - knapp för att lägga beställning */
+.button-footer-submitorder {
+	width: 40%;
+	height: 6vh;
+	font-size: 1rem;
+	color: var(--red);
+	background-color: var(--black);
+	border: 1px solid var(--red);
+	/* padding: var(--padding); */
+}
+
+
+.li-submenu-filter {
+	/* margin-top: 2em; */
+	background-color: var(--white);
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	border: 1px solid var(--white);
+
+	border-radius: 4px;
+}
+.button-menu-filter {
+	border: 0;
+	padding: 0.3em;
+	font-size: 1.2em;
+	flex-grow: 1;
+	outline: 1px solid var(--red);
+	background-color: var(--black);
+	color: var(--red);
+}
+.button-active {
+	color: var(--black);
+	background-color: var(--red);
+}
+
+
+.button-sub-active {
+	color: var(--black);
+	background-color: var(--red);
+}
+.li-state-filter-active {
+	background-color: var(--red);
+	color: var(--black);
+}
+
+  /* Klass för att toggla olika element att döljas/visas */
+.hide {
+	display: none;
+}
+
+.li-order-interact {
+	background-color: #5c5c5c;
+	transition: all 0.4s ease-in-out;
+}
